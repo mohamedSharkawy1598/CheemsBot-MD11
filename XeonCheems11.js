@@ -1772,11 +1772,11 @@ if (!isAdmins && !XeonTheCreator) return XeonStickAdmin()
                     replygcxeon(mess.done)
                 }
                 break
-            case 'leave':
-            case 'out':
+            case 'اخرج':
+            case 'اطلع':
                 if (!XeonTheCreator) return XeonStickOwner()
                 if (!m.isGroup) return XeonStickGroup()
-                replygcxeon('Bye Everyone 🥺')
+                replygcxeon('*『👋』باي باي هتوحشوني🥺🖐*')
                 await XeonBotInc.groupLeave(m.chat)
             break
             case 'bc':
@@ -1832,18 +1832,18 @@ await sleep(5000)
 replygcxeon(`Success`)
 }
 break
-case 'block': case 'ban': {
+case 'حظر': case 'بلوك': {
 		if (!XeonTheCreator) return XeonStickOwner()
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await XeonBotInc.updateBlockStatus(users, 'block')
-		await replygcxeon(`Done`)
+		await replygcxeon(`*『🚫』تم حظرة بنجاح يا سيدي.*`)
 	}
 	break
-	case 'unblock': case 'unban': {
+	case 'الغاء-حظر': case 'الغاء-بلوك': {
 		if (!XeonTheCreator) return XeonStickOwner()
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await XeonBotInc.updateBlockStatus(users, 'unblock')
-		await replygcxeon(`Done`)
+		await replygcxeon(`*『💯』تم الغاء الحظر بنجاح يا سيدي.*`)
 	}
 	break
             case 'bcgc':
