@@ -2551,7 +2551,7 @@ if (!XeonTheCreator) return XeonStickOwner()
                 let me = m.sender
                 let teks = `*╝»˙·.『منشن جماعي』.٠·˙«╚*\n *『الذي منشن🪭』 :*  @${me.split('@')[0]}\n *『الرسالة📧』 :* ${q ? q : ''}\n\n`
                 for (let mem of participants) {
-                teks += `*⎔↜ @${mem.id.split('@')[0]}*\n*⎔ ┉═─⌯═『🌗』 ┉═─⌯═⎔*`
+                teks += `*⎔↜ @${mem.id.split('@')[0]}*\n`
                 }
                 XeonBotInc.sendMessage(m.chat, {
                     text: teks,
