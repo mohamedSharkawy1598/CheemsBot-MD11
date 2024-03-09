@@ -3464,29 +3464,29 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
 		         await replygcxeon(isi)
 			   }
 			   break
-    case 'xxqc': {
-if (!q) return replygcxeon(`📌Example: ${prefix + command} pink hallo\n\n꒰ 🖌️ Color List ꒱ ೄྀ࿐ ˊˎ-\n━━━━━━⊱⋆⊰━━━━━━\npink\nblue\nred\ngreen\nyellow\npurple\ndarkblue\nlightblue\nash\norange\nblack\nwhite\nteal\nlightpink\nchocolate\nsalmon\nmagenta\ntan\nwheat\ndeeppink\nfire\nskyblue\nsafron\nbrightskyblue\nhotpink\nlightskyblue\nseagreen\ndarkred\norangered\ncyan\nviolet\nmossgreen\ndarkgreen\nnavyblue\ndarkorange\ndarkpurple\nfuchsia\ndarkmagenta\ndarkgray\npeachpuff\nblackishgreen\ndarkishred\ngoldenrod\ndarkishgray\ndarkishpurple\ngold\nsilver`)
+    case 'اكتب': {
+if (!q) return replygcxeon(`*『🧶』قم بكتابة الون من ثم النص اكتب ايتا لون تريده ليكون شكل لي كلمات الملصق.*`)
 if (text.length > 100) return replygcxeon(`Max 100 character.`)
 let [color, ...message] = text.split(' ');
 message = message.join(' ');
 let backgroundColor;
 switch(color) {
-case 'pink':
+case 'وردي':
 backgroundColor = '#f68ac9';
 break;
-case 'blue':
+case 'ازرق':
 backgroundColor = '#6cace4';
 break;
-case 'red':
+case 'احمر':
 backgroundColor = '#f44336';
 break;
-case 'green':
+case 'اخضر':
 backgroundColor = '#4caf50';
 break;
-case 'yellow':
+case 'اصفر':
 backgroundColor = '#ffeb3b';
 break;
-case 'purple':
+case 'ارجواني':
 backgroundColor = '#9c27b0';
 break;
 case 'darkblue':
@@ -3495,19 +3495,19 @@ break;
 case 'lightblue':
 backgroundColor = '#03a9f4'; 
 break;
-case 'ash':
+case 'رمادي':
 backgroundColor = '#9e9e9e';
 break;
-case 'orange':
+case 'برتقالي':
 backgroundColor = '#ff9800';
 break;
-case 'black':
+case 'اسود':
 backgroundColor = '#000000';
 break;
-case 'white':
+case 'ابيض':
 backgroundColor = '#ffffff';
 break;
-case 'teal':
+case 'سمائي':
 backgroundColor = '#008080';
 break;
 case 'lightpink':
@@ -3530,10 +3530,10 @@ break;
 case 'deeppink':
 backgroundColor = '#FF1493'; 
 break; 
-case 'fire':
+case 'ناري':
 backgroundColor = '#B22222';
 break;
-case 'skyblue':
+case 'سماوي':
 backgroundColor = '#00BFFF';
 break; 
 case 'orange':
