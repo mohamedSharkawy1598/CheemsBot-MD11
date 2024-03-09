@@ -2549,9 +2549,9 @@ if (!XeonTheCreator) return XeonStickOwner()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
                 let me = m.sender
-                let teks = `*╚»˙·.『منشن جماعي』.٠·˙«╝*\n *『الذي منشن🪭』 :*  @${me.split('@')[0]}\n *『الرسالة📧』 : ${q ? q : ''}*\n\n`
+                let teks = `*╝»˙·.『منشن جماعي』.٠·˙«╚*\n *『الذي منشن🪭』 :*  @${me.split('@')[0]}\n *『الرسالة📧』 :* ${q ? q : ''}\n\n`
                 for (let mem of participants) {
-                teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
+                teks += `*⎔↜ @${mem.id.split('@')[0]}*\n*⎔ ┉═─⌯═『🌗』 ┉═─⌯═⎔*`
                 }
                 XeonBotInc.sendMessage(m.chat, {
                     text: teks,
