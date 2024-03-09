@@ -2971,9 +2971,9 @@ break
                     quoted: m
                 })
                 break
-case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
+case 'sc': case 'سكريبت': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 let me = m.sender
-let teks = `*「  ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nHi @${me.split('@')[0]} 👋\nDont forget to donate yeah🍜 👇 https://i.ibb.co/y6XmZ2b/donate.png`
+let teks = `*『قلتلك يبني متحولششش متحاولشش روح نام بقا』*`
 sendXeonBotIncMessage(from, { 
 text: teks,
 mentions:[sender],
@@ -2995,7 +2995,7 @@ mentionedJid:[sender],
 })
 }
 break
-            case 'owner': {
+            case 'المطور': {
                 XeonBotInc.sendMessage(from, {
                     contacts: {
                         displayName: `${list.length} Contact`,
@@ -3007,23 +3007,23 @@ break
             }
             break
             //convert
-case 's': case 'sticker': case 'stiker': {
-if (!quoted) return replygcxeon(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds`)
+case 's': case 'ملصق': case 'استيكر': {
+if (!quoted) return replygcxeon(`*『🖼』قم بلاشارة او ارسال صورة او فيديو لا يتخطي 9ثواني*`)
 if (/image/.test(mime)) {
 let media = await quoted.download()
 let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return replygcxeon('Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds')
+if ((quoted.msg || quoted).seconds > 11) return replygcxeon('*『🖼』قم بلاشارة او ارسال صورة او فيديو لا يتخطي 9ثواني*')
 let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 } else {
-replygcxeon(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds`)
+replygcxeon(`*『🖼』قم بلاشارة او ارسال صورة او فيديو لا يتخطي 9ثواني*`)
 }
 }
 break
-            case 'swm': case 'steal': case 'stickerwm': case 'take':{
+            case 'سرقه': case 'سرقة': case 'stickerwm': case 'take':{
 if (!isPremium) return replyprem(mess.premium)
-if (!args.join(" ")) return replygcxeon(`Where is the text?`)
+if (!args.join(" ")) return replygcxeon(`*『🥷🏻』قم بكتابة جملة لوضعها علي الملصق.* `)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0]
 const atnm = swn.split("|")[1]
