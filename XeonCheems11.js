@@ -4961,14 +4961,14 @@ isForwarded: true,
 { quoted: m})        
             }
             break
- case 'couple': {
+ case 'طلقني': {
             if (!m.isGroup) return XeonStickGroup()
             let member = participants.map(u => u.id)
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
 XeonBotInc.sendMessage(m.chat,
-{ text: `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-Cieeee, What's Going On❤️💖👀`,
+{ text: `*طلقها لو عندك دم😂* @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
+*طلقتم من بعض عشان انتو مش نافعين😂*`,
 contextInfo:{
 mentionedJid:[orang, jodoh],
 forwardingScore: 9999999,
