@@ -4174,11 +4174,11 @@ replygcxeon(`Success
 ${meg.result}`)
 }
 break
-case 'style': case 'styletext': {
+case 'زخرفه': case 'زخرفة': {
 		let { styletext } = require('./lib/scraper')
-		if (!text) return replygcxeon('Enter Query text!')
+		if (!text) return replygcxeon('*『🪇』اين الجملة التي تود ان تزخرفها.*')
                 let anu = await styletext(text)
-                let teks = `Style Text From ${text}\n\n`
+                let teks = `*نمط النص من ${text}*\n\n`
                 for (let i of anu) {
                     teks += `${themeemoji} *${i.name}* : ${i.result}\n\n`
                 }
