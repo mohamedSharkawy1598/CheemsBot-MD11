@@ -2606,9 +2606,9 @@ if (!XeonTheCreator) return XeonStickOwner()
                     replygcxeon(`Mode ${command}\n\n\nType ${prefix + command}on/off`)
                 }
             break
-            case 'رستر':
-            case 'linkgrup':
-            case 'linkgc':
+            case 'لينك':
+            case 'الرابط':
+            case 'رابط':
             case 'gclink':
             case 'grouplink':
             case 'gruplink':
@@ -2777,7 +2777,7 @@ break
 	    }
             break
 break
-            case 'revoke':
+            case 'رستر':
             case 'resetlink':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
@@ -2787,8 +2787,8 @@ break
                         replygcxeon(`Reset Success`)
                     })
             break
-                //bot status
-            case 'ping': case 'botstatus': case 'statusbot': case 'p': {
+                //سرعة البوت
+            case 'البنج': case 'بنج': case 'statusbot': case 'p': {
 	const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
