@@ -148,22 +148,22 @@ const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')  
 if(time2 < "23:59:00"){
-var xeonytimewisher = `Good Night 🌌`
+var xeonytimewisher = `طاب مساؤك 🌌`
  }
  if(time2 < "19:00:00"){
-var xeonytimewisher = `Good Evening 🌃`
+var xeonytimewisher = `مساء الخير 🌃`
  }
  if(time2 < "18:00:00"){
-var xeonytimewisher = `Good Evening 🌃`
+var xeonytimewisher = `مساء الخير 🌃`
  }
  if(time2 < "15:00:00"){
-var xeonytimewisher = `Good Afternoon 🌅`
+var xeonytimewisher = `مساء الخير 🌅`
  }
  if(time2 < "11:00:00"){
-var xeonytimewisher = `Good Morning 🌄`
+var xeonytimewisher = `صباح الخير 🌄`
  }
  if(time2 < "05:00:00"){
-var xeonytimewisher = `Good Morning 🌄`
+var xeonytimewisher = `صباح الخير 🌄`
  } 
 //function
 const reSize = async(buffer, ukur1, ukur2) => {
@@ -2543,13 +2543,13 @@ if (!XeonTheCreator) return XeonStickOwner()
                     replygcxeon(mess.done)
                 }
                 break
-            case 'tagall':
-            case 'tag':
+            case 'منشن':
+            case 'المنشن':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
                 let me = m.sender
-                let teks = `╚»˙·٠${themeemoji}●♥ Tag All ♥●${themeemoji}٠·˙«╝\n😶 *Tagger :*  @${me.split('@')[0]}\n🌿 *Message : ${q ? q : 'no message'}*\n\n`
+                let teks = `*╚»˙·.『منشن جماعي』.٠·˙«╝*\n *『الذي منشن🪭』 :*  @${me.split('@')[0]}\n *『الرسالة📧』 : ${q ? q : ''}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
@@ -2560,7 +2560,7 @@ if (!XeonTheCreator) return XeonStickOwner()
                     quoted: m
                 })
             break
-            case 'hidetag':
+            case 'مخفي':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
