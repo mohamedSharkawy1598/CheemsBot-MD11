@@ -4197,8 +4197,8 @@ case 'yts': case 'ytsearch': {
                 XeonBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
             break
-            case 'play':  case 'song': {
-if (!text) return replygcxeon(`Example : ${prefix + command} anime whatsapp status`)
+            case 'اغنية':  case 'اغنيه': {
+if (!text) return replygcxeon(`*『🔖』قم بكتابة اسم الاغنيه التي تود تنزيلها.*`)
 const xeonplaymp3 = require('./lib/ytdl')
 let yts = require("youtube-yts")
         let search = await yts(text)
