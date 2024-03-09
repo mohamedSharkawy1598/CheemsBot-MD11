@@ -1073,10 +1073,10 @@ if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd2) {
             }
             if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
                 replygcxeon({
-                    '-3': 'The game is over',
-                    '-2': 'Invalid',
-                    '-1': 'Invalid Position',
-                    0: 'Invalid Position',
+                    '-3': '*『انتهت الجولة🧪』*',
+                    '-2': '*『هذا المكان قد تم العب فيه🍀』*',
+                    '-1': '*『انة ليس دورك🧸』*',
+                    0: '*『موقف غير صالح🧣』*',
                 } [ok])
                 return !0
             }
@@ -1102,17 +1102,17 @@ if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd2) {
                 isWin = true
             }
             let winner = isSurrender ? room.game.currentTurn : room.game.winner
-            let str = `Room ID: ${room.id}
+            let str = `*『رقم الغرفة🍃』*: ${room.id}
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-${isWin ? `@${winner.split('@')[0]} Won!` : isTie ? `Game over` : `Turn ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `『@${winner.split('@')[0]} الفائز🥇』` : isTie ? `『انتهت الجولة🧪』` : `*انة دور* ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
-Type *surrender* to surrender and admit defeat`
+*『اكتب الاستسلام  والاعتراف بالهزيمة🍀』*`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
                 room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
             if (room.x !== room.o) XeonBotInc.sendText(room.x, str, m, {
@@ -3660,7 +3660,7 @@ break
                 }
             }
             break
-            case 'delete': case 'del': case 'd':{
+            case 'حذف': case 'احذف': case 'مسح':{
             	 let key = {}
  try {
  	key.remoteJid = m.quoted ? m.quoted.fakeObj.key.remoteJid : m.key.remoteJid
