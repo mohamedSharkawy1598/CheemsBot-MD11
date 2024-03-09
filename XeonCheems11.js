@@ -4967,7 +4967,7 @@ isForwarded: true,
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
 XeonBotInc.sendMessage(m.chat,
-{ text: `*طلقها لو عندك دم😂* @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
+{ text: `@${me.split('@')[1]} ❤️ @${jodoh.split('@')[1]}
 *طلقتم من بعض عشان انتو مش نافعين😂*`,
 contextInfo:{
 mentionedJid:[orang, jodoh],
@@ -4985,7 +4985,7 @@ isForwarded: true,
 { quoted: m})        
             }
             break
-                        case 'coffee': case 'kopi': {
+                        case 'قهوة': case 'قهوه': {
                 XeonBotInc.sendMessage(m.chat, {caption: mess.success, image: { url: 'https://coffee.alexflipnote.dev/random' }}, { quoted: m })
             }
             break
