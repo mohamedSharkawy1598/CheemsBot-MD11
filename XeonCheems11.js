@@ -1101,11 +1101,11 @@ ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-${isWin ? `『@${winner.split('@')[0]} الفائز🥇』` : isTie ? `『انتهت الجولة🧪』` : `*انة دور* ${['❌', '⭕'][1 * room.game._currentTurn]}*『@${room.game.currentTurn.split('@')[0]}』*`}
+${isWin ? `*『@${winner.split('@')[0]} الفائز🥇』*` : isTie ? `*『انتهت الجولة🧪』*` : `*انة دور* ${['❌', '⭕'][1 * room.game._currentTurn]} *『@${room.game.currentTurn.split('@')[0]}』*`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
-*『اكتب الاستسلام لالاستسلام🍀』*`
+*『اكتب استسلم لي الخروج🍀』*`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
                 room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
             if (room.x !== room.o) XeonBotInc.sendText(room.x, str, m, {
