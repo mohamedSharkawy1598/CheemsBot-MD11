@@ -4936,15 +4936,15 @@ const okebnh1 =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15
 const xeonkak = okebnh1[Math.floor(Math.random() * okebnh1.length)]
 XeonBotInc.sendMessage(m.chat, { text: xeonkak }, { quoted: m })
 break
-            case 'soulmate': {
+            case 'زوجني': {
             if (!m.isGroup) return XeonStickGroup()
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
 XeonBotInc.sendMessage(m.chat,
-{ text: `👫Your Soulmate Is
+{ text: `*😂♥زوجتكم الف مبروك*
 
-@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`,
+@${me.split('@')[0]} ❤️ *برفاء والبنين😂* @${jodoh.split('@')[0]}`,
 contextInfo:{
 mentionedJid:[me, jodoh],
 forwardingScore: 9999999,
@@ -4989,8 +4989,8 @@ isForwarded: true,
                 XeonBotInc.sendMessage(m.chat, {caption: mess.success, image: { url: 'https://coffee.alexflipnote.dev/random' }}, { quoted: m })
             }
             break
-            case 'wallpaper': {
-                if (!text) return replygcxeon('Enter Query Title')
+            case 'خلفيات': {
+                if (!text) return replygcxeon('*『🔖』قم بكتابة اسم الخلفيات.*')
                 await XeonStickWait()
 		let { wallpaper } = require('./lib/scraper')
                 anuwallpep = await wallpaper(text)
