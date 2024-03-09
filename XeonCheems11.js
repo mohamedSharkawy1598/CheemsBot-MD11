@@ -2571,11 +2571,11 @@ if (!XeonTheCreator) return XeonStickOwner()
                     quoted: m
                 })
             break
-            case 'totag':
+            case 'منشني':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isBotAdmins) return XeonStickBotAdmin()
                 if (!isAdmins) return replygcxeon(mess.admin)
-                if (!m.quoted) return replygcxeon(`Reply media with caption ${prefix + command}`)
+                if (!m.quoted) return replygcxeon(`*『🧨』قم بلاشارة علي الرساله التي تريد مني ان امنشن عليها.*`)
                 XeonBotInc.sendMessage(m.chat, {
                     forward: m.quoted.fakeObj,
                     mentions: participants.map(a => a.id)
