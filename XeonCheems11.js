@@ -2417,7 +2417,7 @@ break
                 await XeonBotInc.groupParticipantsUpdate(m.chat, [blockwwww], 'add')
                 replygcxeon(mess.done)
                 break
-            case 'promote':
+            case 'رفع':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
@@ -2425,7 +2425,7 @@ break
                 await XeonBotInc.groupParticipantsUpdate(m.chat, [blockwwwww], 'promote')
                 replygcxeon(mess.done)
                 break
-            case 'demote':
+            case 'خفض':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
@@ -2581,17 +2581,17 @@ if (!XeonTheCreator) return XeonStickOwner()
                     mentions: participants.map(a => a.id)
                 })
             break
-            case 'group':
-            case 'grup':
+            case 'جروب':
+            case 'الجروب':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
-                if (args[0] === 'close') {
-                    await XeonBotInc.groupSettingUpdate(m.chat, 'announcement').then((res) => replygcxeon(`Success Closing Group`))
-                } else if (args[0] === 'open') {
-                    await XeonBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replygcxeon(`Success Opening Group`))
+                if (args[0] === 'قفل') {
+                    await XeonBotInc.groupSettingUpdate(m.chat, 'announcement').then((res) => replygcxeon(`*『🔒』تم غلق الجروب بنجاح.*`))
+                } else if (args[0] === 'فتح') {
+                    await XeonBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replygcxeon(`*『🔓』تم فتح الجروب بنجاح.*`))
                 } else {
-                    replygcxeon(`Mode ${command}\n\n\nKetik ${prefix + command}open/close`)
+                    replygcxeon(`*『❗』مثال: قم بكتابة الوضع الذي تريد الجروب فيه فتح/قفل.*`)
                 }
             break
             case 'editinfo':
@@ -2606,7 +2606,7 @@ if (!XeonTheCreator) return XeonStickOwner()
                     replygcxeon(`Mode ${command}\n\n\nType ${prefix + command}on/off`)
                 }
             break
-            case 'linkgroup':
+            case 'رستر':
             case 'linkgrup':
             case 'linkgc':
             case 'gclink':
