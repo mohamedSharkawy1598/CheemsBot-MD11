@@ -1108,11 +1108,11 @@ ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-${isWin ? `『@${winner.split('@')[0]} الفائز🥇』` : isTie ? `『انتهت الجولة🧪』` : `*انة دور* ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `『@${winner.split('@')[0]} الفائز🥇』` : isTie ? `『انتهت الجولة🧪』` : `*انة دور* ${['❌', '⭕'][1 * room.game._currentTurn]}*『@${room.game.currentTurn.split('@')[0]}』*`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
-*『اكتب الاستسلام  والاعتراف بالهزيمة🍀』*`
+*『اكتب الاستسلام لالاستسلام🍀』*`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
                 room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
             if (room.x !== room.o) XeonBotInc.sendText(room.x, str, m, {
@@ -1206,21 +1206,21 @@ fs.writeFileSync('./src/data/role/user.json', JSON.stringify(xeonverifieduser, n
 }
         
         switch (isCommand) {
-            case 'addbadword': case 'addbd':
+            case 'اضف-سب': case 'اضف-السب':
                if (!XeonTheCreator) return XeonStickOwner()
                if (!groupAdmins) return replygcxeon(mess.admin)
-               if (args.length < 1) return replygcxeon( `Send command ${prefix}addbadword [harsh word]. Example ${prefix}addbadword asshole`)
+               if (args.length < 1) return replygcxeon( `*『😶‍🌫️』قم بكتابة الكلمة السيئة.*`)
                bad.push(q)
                fs.writeFileSync('./src/data/function/badword.json', JSON.stringify(bad))
-               replygcxeon('Successfully Added Bad Word!')
+               replygcxeon('*『😶‍🌫️』تمت إضافة الكلمة السيئة بنجاح!*')
             break
-            case 'delbadword': case 'deldb':
+            case 'حذف-سب': case 'حذف-السب':
                if (!XeonTheCreator) return XeonStickOwner()
                if (!groupAdmins) return replygcxeon(mess.admin)
-               if (args.length < 1) return replygcxeon( `Send commands ${prefix}addbadword [bad word]. Example ${prefix}addbadword asshole`)                 
+               if (args.length < 1) return replygcxeon( `*『😶‍🌫️』قم بكتابة الكلمة السيئة لحذفها.*`)                 
                bad.splice(q)
                fs.writeFileSync('./src/data/function/badword.json', JSON.stringify(bad))
-               replygcxeon('Successfully Deleted Bad Word!')
+               replygcxeon('*『😶‍🌫️』تم بنجاح الحذف من الكلمات السيئة.*')
             break 
             case 'resetuser':
             case 'resetdbuser': {
