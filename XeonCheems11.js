@@ -1685,25 +1685,25 @@ if (!isAdmins && !XeonTheCreator) return XeonStickAdmin()
                     replygcxeon(`Successfully Changed Only-Indonesian To ${q}`)
                 }
             break
-            case 'self': {
+            case 'خاص': {
                 if (!XeonTheCreator) return XeonStickOwner()
                 XeonBotInc.public = false
-                replygcxeon('*Successful in Changing To Self Usage*')
+                replygcxeon('*『👤』تم تغير البوت لي خاص يقدر المطور فقط علي استخدامة.*')
             }
             break
-            case 'public': {
+            case 'عام': {
                 if (!XeonTheCreator) return XeonStickOwner()
                 XeonBotInc.public = true
-                replygcxeon('*Successful in Changing To Public Usage*')
+                replygcxeon('*『👥』تم تغير البوت لب الاستخدام العام بنجاح.*')
             }
             break
             case 'mode':
                 if (!XeonTheCreator) return XeonStickOwner()
                 if (args.length < 1) return replygcxeon(`Example ${prefix + command} public/self`)
-                if (q == 'public') {
+                if (q == 'عام') {
                     XeonBotInc.public = true
                     replygcxeon(mess.done)
-                } else if (q == 'self') {
+                } else if (q == 'خاص') {
                     XeonBotInc.public = false
                     replygcxeon(mess.done)
                 }
@@ -2402,7 +2402,7 @@ let sngContact = {
 XeonBotInc.sendMessage(m.chat, {contacts: sngContact, mentions: participants.map(a => a.id)}, {ephemeralExpiration: 86400})
 }
 break
-            case 'add':
+            case 'اضف':
                 if (!m.isGroup) return XeonStickGroup()
                 if(!XeonTheCreator) return XeonStickOwner()
                 if (!isBotAdmins) return XeonStickBotAdmin()
