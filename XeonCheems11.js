@@ -1,11 +1,4 @@
-//base by DGXeon
-//re-upload? recode? copy code? give credit ya :)
-//YouTube: @DGXeon
-//Instagram: unicorn_xeon13
-//Telegram: t.me/xeonbotinc
-//GitHub: @DGXeon
-//WhatsApp: +916909137213
-//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
+//المبرمج سونغ
 
 require('./lib/listmenu')
 const {
@@ -96,7 +89,7 @@ const {
     buffergif,
     totalcase
 } = require('./lib/myfunc')
-//prem owner function
+//وظيفة المالك الأولي
 const {
     addPremiumUser,
     getPremiumExpired,
@@ -105,12 +98,12 @@ const {
     checkPremiumUser,
     getAllPremiumUser,
 } = require('./lib/premiun')
-//data
+//بيانات
 let ntnsfw = JSON.parse(fs.readFileSync('./src/data/function/nsfw.json'))
 let bad = JSON.parse(fs.readFileSync('./src/data/function/badword.json'))
 let premium = JSON.parse(fs.readFileSync('./src/data/role/premium.json'))
 const owner = JSON.parse(fs.readFileSync('./src/data/role/owner.json'))
-//media
+//وسائط
 const VoiceNoteXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonvn.json'))
 const StickerXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonsticker.json'))
 const ImageXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonimage.json'))
@@ -119,7 +112,7 @@ const DocXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/doc.json'))
 const ZipXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/zip.json'))
 const ApkXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/apk.json'))
 
-//bug database
+//قاعدة بيانات الأخطاء
 const { xeontext1 } = require('./src/data/function/XBug/xeontext1')
 const { xeontext2 } = require('./src/data/function/XBug/xeontext2')
 const { xeontext3 } = require('./src/data/function/XBug/xeontext3')
@@ -143,7 +136,7 @@ settings: {},
 let vote = db.data.others.vote = []
 let kuismath = db.data.game.math = []
 
-//time
+//الوقت
 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')  
@@ -165,7 +158,7 @@ var xeonytimewisher = `صباح الخير 🌄`
  if(time2 < "05:00:00"){
 var xeonytimewisher = `صباح الخير 🌄`
  } 
-//function
+//وظيفة
 const reSize = async(buffer, ukur1, ukur2) => {
    return new Promise(async(resolve, reject) => {
       let jimp = require('jimp')
@@ -174,7 +167,7 @@ const reSize = async(buffer, ukur1, ukur2) => {
       resolve(ab)
    })
 }
-//module
+//وحدة
 module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
     try {
         const {
@@ -204,7 +197,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
         const quoted = (fatkuns.mtype == 'buttonsMessage') ? fatkuns[Object.keys(fatkuns)[1]] : (fatkuns.mtype == 'templateMessage') ? fatkuns.hydratedTemplate[Object.keys(fatkuns.hydratedTemplate)[1]] : (fatkuns.mtype == 'product') ? fatkuns[Object.keys(fatkuns)[0]] : m.quoted ? m.quoted : m
         const mime = (quoted.msg || quoted).mimetype || ''
         const qmsg = (quoted.msg || quoted)
-        //media
+        //وسائط
         const isMedia = /image|video|sticker|audio/.test(mime)
         const isImage = (type == 'imageMessage')
         const isVideo = (type == 'videoMessage')
@@ -227,7 +220,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
         const xeonybody = body.startsWith(pric)
         const isCommand = xeonybody ? body.replace(pric, '').trim().split(/ +/).shift().toLowerCase() : ""
         const sticker = []
-       //group
+       //الجروبات
         const isGroup = m.key.remoteJid.endsWith('@g.us')
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
@@ -3324,15 +3317,15 @@ replygcxeon(teks)
 break
 
             //game
-            case 'ttc':
-            case 'ttt':
-            case 'tictactoe': {
+            case 'اكس':
+            case 'او':
+            case 'اكس-او': {
                 let TicTacToe = require("./lib/tictactoe")
                 this.game = this.game ? this.game : {}
                 if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replygcxeon('You are still in the game')
                 let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
                 if (room) {
-                    replygcxeon('Partner not found!')
+                    replygcxeon('*『⌛』بي انتظار شخص اخرلي يلعب معك.*')
                     room.o = m.chat
                     room.game.playerO = m.sender
                     room.state = 'PLAYING'
@@ -3351,7 +3344,7 @@ break
                             9: '9️⃣',
                         } [v]
                     })
-                    let str = `Room ID: ${room.id}
+                    let str = `*『رقم الغرفة🧪』*: ${room.id}
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
