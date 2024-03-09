@@ -3228,11 +3228,11 @@ break
                 }
             }
             break
-            case 'fliptext': {
+            case 'شقلب': {
                 if (args.length < 1) return replygcxeon(`Example:\n${prefix}fliptext dgxeon`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
-                replygcxeon(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
+                replygcxeon(`\`\`\`「 شقلبة 」\`\`\`\n*•> العادي :*\n${quere}\n*•> الشقلبة :*\n${flipe}`)
             }
             break
             case 'toqr':{
