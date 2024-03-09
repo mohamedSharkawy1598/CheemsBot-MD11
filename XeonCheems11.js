@@ -5912,7 +5912,7 @@ var xeonyresultx = pickRandom(ahegaonsfw)
     await XeonBotInc.sendMessage(m.chat,{video:xeonyresultx, gifPlayback:true },{quoted:m}).catch(err => {
     })
     break
-case 'checkme':
+case 'شخصية': case 'شخصيه': case 'شخصيتي':
 					neme = args.join(" ")
 					bet = `${sender}`
 					var sifat = ['التواضع','الاحترام','طيب','حنون','قوي','عبقري','شرير','خثيث','قبيح','نذل','زق','طفل']
@@ -5937,7 +5937,7 @@ case 'checkme':
 					var cerdas = cerdhas[Math.floor(Math.random() * cerdhas.length)]
 					var berani = berhani[Math.floor(Math.random() * berhani.length)]
 					var takut = mengheikan[Math.floor(Math.random() * mengheikan.length)]
-					 profile = `*⎔ ┉═─⌯═*〘 @${bet.split('@')[0]} 〙*┉═─⌯═⎔**
+					 profile = `*⎔ ┉═─⌯═〘 @${bet.split('@')[0]} 〙┉═─⌯═⎔*
 
 *『الاسم🧪』:* ${pushname}
 *『الصفة🧶』:* ${sipat}
