@@ -4787,37 +4787,37 @@ XeonBotInc.sendMessage(from, { image: { url: random.male }, caption: `*『ولد
 XeonBotInc.sendMessage(from, { image: { url: random.female }, caption: `*『بنت♀️』*` }, { quoted: m })
 }
 break
-case 'profilepic':  case 'profilepicture':
+case 'افتار':  case 'افتارات':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/profile.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-case 'pubg':
+case 'ببجي':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/pubg.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-case 'rose':
+case 'ورد':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/rose.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-case 'ryujin':
+case 'ريوجين':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/ryujin.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
-break
-case 'ulzzangboy':
+break 
+case 'اولزانغ':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/ulzzangboy.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-case 'ulzzanggirl':
+case 'اوزلانا':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/ulzzanggirl.json'))
 var hasil = pickRandom(notnot)
@@ -4829,7 +4829,7 @@ var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/wallml.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-case 'wallpaperphone': case 'wallphone':
+case 'خلفيات': case 'الخلفيات':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/wallhp.json'))
 var hasil = pickRandom(notnot)
@@ -4864,9 +4864,9 @@ const reply = `
     return replygcxeon(`*${q}* isn't a valid text`)
     }
     break
-                case 'can': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} i dance?`)
-            	let bisa = [`Can`,`Can't`,`Cannot`,`Of Course You Can!!!`]
+                case 'هل': {
+            	if (!text) return replygcxeon(`*『❔』مثال: هل انا عبيط*`)
+            	let bisa = [`اجل`,`لا`,`ايوه`,`ممكن`]
                 let keh = bisa[Math.floor(Math.random() * bisa.length)]
                 let jawab = `*Can ${text}*\nAnswer : ${keh}`
             await replygcxeon(jawab)
