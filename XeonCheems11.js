@@ -4594,13 +4594,13 @@ case 'رنة': case 'رنه': {
 		XeonBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
 	    break
-case 'tiktokgirl':
+case 'بنات':
 await XeonStickWait()
 var asupan = JSON.parse(fs.readFileSync('./src/media/tiktokvids/tiktokgirl.json'))
 var hasil = pickRandom(asupan)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
 break
-case 'tiktokghea':
+case 'ولاد':
 await XeonStickWait()
 var gheayubi = JSON.parse(fs.readFileSync('./src/media/tiktokvids/gheayubi.json'))
 var hasil = pickRandom(gheayubi)
@@ -4835,9 +4835,9 @@ var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/wallhp.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-            case 'remini': {
-			if (!quoted) return replygcxeon(`Where is the picture?`)
-			if (!/image/.test(mime)) return replygcxeon(`Send/Reply Photos With Captions ${prefix + command}`)
+            case 'جودة': case 'جوده': case 'توصيح': {
+			if (!quoted) return replygcxeon(`*『❔』أين الصورة؟*`)
+			if (!/image/.test(mime)) return replygcxeon(`*『🖼』قم بي ارسال/اشارة علي صورة لرفع جودتها*`)
 			await XeonStickWait()
 			const { remini } = require('./lib/remini')
 			let media = await quoted.download()
