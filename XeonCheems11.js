@@ -4185,8 +4185,8 @@ case 'زخرفه': case 'زخرفة': {
                 replygcxeon(teks)
 	    }
 	    break
-case 'yts': case 'ytsearch': {
-                if (!text) return replygcxeon(`Example : ${prefix + command} story wa anime`)
+case 'يوتيوب': case 'يوت': {
+                if (!text) return replygcxeon(`*『📽』قم بكتابة الاسم الذي تريد البحث عنه في اليوتيوب وانا سا اقوم بجلب قائمة له.*`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
