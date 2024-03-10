@@ -4189,10 +4189,10 @@ case 'يوتيوب': case 'يوت': {
                 if (!text) return replygcxeon(`*『📽』قم بكتابة الاسم الذي تريد البحث عنه في اليوتيوب وانا سا اقوم بجلب قائمة له.*`)
                 let yts = require("yt-search")
                 let search = await yts(text)
-                let teks = '*『📽البحث من اليوتيوب📽』*\n\n*『🔍』نتيجة البحث:*'+text+'\n\n'
+                let teks = '*『📽البحث من اليوتيوب📽』*\n\n*『🔍』نتيجة البحث:* '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
-                    teks += `*${themeemoji}『الصيغة🎞』:* ${i.type}\n${themeemoji}*『الايدي📍』:* ${i.videoId}\n${themeemoji}*『الاسم🍀』:* ${i.title}\n${themeemoji}*『المشاهدات👀』:* ${i.views}\n${themeemoji}*『المدة⏳』:* ${i.timestamp}\n${themeemoji}*『مدة الرفع🧪』:* ${i.ago}\n${themeemoji}*『الرابط⛓️』:* ${i.url}\n\n━──━✦⊱⋟📽⋞⊰✦━──━\n\n`
+                    teks += `*${themeemoji}『الصيغة🎞』:* ${i.type}\n*${themeemoji}『الايدي📍』:* ${i.videoId}\n*${themeemoji}『الاسم🍀』:* *${i.title}\n${themeemoji}『المشاهدات👀』:* *${i.views}\n*${themeemoji}『المدة⏳』:* ${i.timestamp}\n*${themeemoji}『مدة الرفع🧪』:* ${i.ago}\n*${themeemoji}『الرابط⛓️』:* ${i.url}\n\n━──━✦⊱⋟📽⋞⊰✦━──━\n\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
