@@ -4868,7 +4868,7 @@ const reply = `
             	if (!text) return replygcxeon(`*『❔』مثال: هل انا عبيط*`)
             	let bisa = [`اجل`,`لا`,`ايوه`,`ممكن`]
                 let keh = bisa[Math.floor(Math.random() * bisa.length)]
-                let jawab = `*Can ${text}*\nAnswer : ${keh}`
+                let jawab = `*『السؤال❔』 ${text}*\n『الاجابة🍃』 :*${keh}*`
             await replygcxeon(jawab)
             }
             break
@@ -4989,7 +4989,7 @@ isForwarded: true,
                 XeonBotInc.sendMessage(m.chat, {caption: mess.success, image: { url: 'https://coffee.alexflipnote.dev/random' }}, { quoted: m })
             }
             break
-            case 'خلفيات': {
+            case 'backgrounds': {
                 if (!text) return replygcxeon('*『🔖』قم بكتابة اسم الخلفيات.*')
                 await XeonStickWait()
 		let { wallpaper } = require('./lib/scraper')
