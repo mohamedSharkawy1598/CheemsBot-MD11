@@ -2426,12 +2426,12 @@ break
                 await XeonBotInc.groupParticipantsUpdate(m.chat, [blockwwwwwa], 'demote')
                 replygcxeon(mess.done)
                 break
-            case 'setnamegc':
-            case 'setsubject':
+            case 'تغير-اسم':
+            case 'تغير-الاسم':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
-                if (!text) return replygcxeon('Text ?')
+                if (!text) return replygcxeon('*『👥』اين هوا الاسم الذي تريد وضعه؟*')
                 await XeonBotInc.groupUpdateSubject(m.chat, text)
                 replygcxeon(mess.done)
                 break
