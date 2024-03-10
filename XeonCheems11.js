@@ -4554,36 +4554,36 @@ let db = await dBinary(`${q}`)
 replygcxeon(db)
 }
 break
-case 'happymod':{
-if (!q) return replygcxeon(`Example ${prefix+command} Sufway surfer mod`)
+case 'هابيمود':{
+if (!q) return replygcxeon(`*『🌩』اكتب التطبيق الذي تريد تحميلة بلغة الانجليزية فقط.*`)
 await XeonStickWait()
 let kat = await scp2.happymod(q)
 replygcxeon(util.format(kat))
 }
 break
-case 'gdrive': {
+case 'درايف': {
 		if (!args[0]) return replygcxeon(`Enter the Google Drive link`)
 	await XeonStickWait()
 	const fg = require('api-dylux')
 	try {
 	let res = await fg.GDriveDl(args[0])
 	 await replygcxeon(`
-≡ *Google Drive DL*
-▢ *Nama:* ${res.fileName}
-▢ *Size:* ${res.fileSize}
-▢ *Type:* ${res.mimetype}`)
+≡ *جوجل درايف دي إل*
+▢ *الاسم:* ${res.fileName}
+▢ *الحجم:* ${res.fileSize}
+▢ *الكاتب:* ${res.mimetype}`)
 	XeonBotInc.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
    } catch {
 	replygcxeon('Error: Check link or try another link') 
   }
 }
 break
-case 'pinterest': {
-if (!text) return replygcxeon(`Enter Query`)
+case 'بنترست': {
+if (!text) return replygcxeon(`*『🖼』قم بكتابة اسم الصور التي تبحث عنها في بنترست*`)
 let { pinterest } = require('./lib/scraper')
 anutrest = await pinterest(text)
 result = anutrest[Math.floor(Math.random() * anutrest.length)]
-XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ الرابط : '+result }, { quoted: m })
 }
 break
 case 'رنة': case 'رنه': {
@@ -4868,7 +4868,7 @@ const reply = `
             	if (!text) return replygcxeon(`*『❔』مثال: هل انا عبيط*`)
             	let bisa = [`اجل`,`لا`,`ايوه`,`ممكن`]
                 let keh = bisa[Math.floor(Math.random() * bisa.length)]
-                let jawab = `*『السؤال❔』 ${text}*\n『الاجابة🍃』 :*${keh}*`
+                let jawab = `*『السؤال❔』 ${text}*\n*『الاجابة🍃』* :*${keh}*`
             await replygcxeon(jawab)
             }
             break
