@@ -5750,27 +5750,25 @@ await XeonStickWait()
                 })
                 }
 break
-case 'anime': {
+case 'انمي': {
 if (!text) return replygcxeon(`Which anime are you lookin for?`)
 const malScraper = require('mal-scraper')
 await XeonStickWait()
         const anime = await malScraper.getInfoFromName(text).catch(() => null)
         if (!anime) return replygcxeon(`Could not find`)
 let animetxt = `
-🎀 *Title: ${anime.title}*
-🎋 *Type: ${anime.type}*
-🎐 *Premiered on: ${anime.premiered}*
-💠 *Total Episodes: ${anime.episodes}*
-📈 *Status: ${anime.status}*
-💮 *Genres: ${anime.genres}
-📍 *Studio: ${anime.studios}*
-🌟 *Score: ${anime.score}*
-💎 *Rating: ${anime.rating}*
-🏅 *Rank: ${anime.ranked}*
-💫 *Popularity: ${anime.popularity}*
-♦️ *Trailer: ${anime.trailer}*
-🌐 *URL: ${anime.url}*
-❄ *Description:* ${anime.synopsis}*`
+🎀 *الاسم: ${anime.title}*
+🎋 *الكاتب: ${anime.type}*
+🎐 *تم عرضه لأول مرة على: ${anime.premiered}*
+💠 *مجموع الحلقات: ${anime.episodes}*
+📈 *المشاهدات: ${anime.status}*
+💮 *الأنواع: ${anime.genres}
+📍 *الاوستديو: ${anime.studios}*
+🌟 *النجوم: ${anime.score}*
+💎 *تقييم: ${anime.rating}*
+🏅 *رتبة: ${anime.ranked}*
+💫 *رتبة: ${anime.popularity}*
+❄ *الوصف:* ${anime.synopsis}*`
                 await XeonBotInc.sendMessage(m.chat,{image:{url:anime.picture}, caption:animetxt},{quoted:m})
                 }
                 break
