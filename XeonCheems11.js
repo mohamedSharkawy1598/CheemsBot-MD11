@@ -4268,7 +4268,7 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
     XeonBotInc.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => replygcxeon(mess.error))
 break
-case 'tiktok':{
+case 'تيك':{
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
@@ -4586,8 +4586,8 @@ result = anutrest[Math.floor(Math.random() * anutrest.length)]
 XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
 }
 break
-case 'ringtone': {
-		if (!text) return replygcxeon(`Example : ${prefix + command} black rover`)
+case 'رنة': case 'رنه': {
+		if (!text) return replygcxeon(`*『📯』قم بكتابة اسم الرنة بي الانجليزي*`)
         let ringtone = require('./lib/scraper')
 		let anutone2 = await ringtone(text)
 		let result = anutone2[Math.floor(Math.random() * anutone2.length)]
@@ -4780,11 +4780,11 @@ var notnot = JSON.parse(fs.readFileSync('./src/media/randompics/car.json'))
 var hasil = pickRandom(notnot)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
 break
-case 'couplepp': case 'ppcouple': {
+case 'تطقيم': case 'طقمي': {
 let anu = require('./src/media/randompics/ppcouple.json')
 let random = anu[Math.floor(Math.random() * anu.length)]
-XeonBotInc.sendMessage(from, { image: { url: random.male }, caption: `Couple pp for male` }, { quoted: m })
-XeonBotInc.sendMessage(from, { image: { url: random.female }, caption: `Couple pp for female` }, { quoted: m })
+XeonBotInc.sendMessage(from, { image: { url: random.male }, caption: `*『ولد♂️』*` }, { quoted: m })
+XeonBotInc.sendMessage(from, { image: { url: random.female }, caption: `*『بنت♀️』*` }, { quoted: m })
 }
 break
 case 'profilepic':  case 'profilepicture':
