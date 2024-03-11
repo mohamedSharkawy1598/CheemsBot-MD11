@@ -2465,9 +2465,9 @@ XeonBotInc.sendMessage(m.chat, { text:teksop, mentions: await XeonBotInc.parseMe
 	}
 }
 break
-    case 'setbotbio':{
+    case 'بوت-وصف': case 'بوت-الوصف':{
 if (!XeonTheCreator) return XeonStickOwner()
-if (!text) return replygcxeon(`Where is the text?\nExample: ${prefix + command} Cheems Bot`)
+if (!text) return replygcxeon(`*『📝』اكتب شئ لوضعة في الوصف*`)
     await XeonBotInc.updateProfileStatus(text)
     replygcxeon(`Success in changing the bio of bot's number`)
     }
@@ -2485,8 +2485,8 @@ if (!XeonTheCreator) return XeonStickOwner()
     replygcxeon(`Success in deleting bot's profile picture`)
     }
     break
-            case 'setdesc':
-            case 'setdesk':
+            case 'تغير-الوصف':
+            case 'تغير-وصف':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins && !isGroupOwner && !XeonTheCreator) return XeonStickAdmin()
                 if (!isBotAdmins) return XeonStickBotAdmin()
@@ -2494,18 +2494,18 @@ if (!XeonTheCreator) return XeonStickOwner()
                 await XeonBotInc.groupUpdateDescription(m.chat, text)
                 replygcxeon(mess.done)
                 break
-            case 'setppgroup':
-            case 'setppgrup':
-            case 'setppgc':
-            case 'setgrouppp':
+            case 'تغير-الصوره':
+            case 'تغير-الصورة':
+            case 'تغير-صوره':
+            case 'تغير-صورة':
             case 'setgruppp':
             case 'setgcpp':
                 if (!m.isGroup) return XeonStickGroup()
                 if (!isAdmins) return replygcxeon(mess.admin)
                 if (!isBotAdmins) return XeonStickBotAdmin()
-                if (!quoted) return replygcxeon(`Send/Reply Image With Caption ${prefix + command}`)
-                if (!/image/.test(mime)) return replygcxeon(`Send/Reply Image Caption Caption ${prefix + command}`)
-                if (/webp/.test(mime)) return replygcxeon(`Send/Reply Image With Caption ${prefix + command}`)
+                if (!quoted) return replygcxeon(`*『🍀』قم بلاشارة او ارسل الصورة لوضعها ايقونة للمجموعة.*`)
+                if (!/image/.test(mime)) return replygcxeon(`*『🍀』قم بلاشارة او ارسل الصورة لوضعها ايقونة للمجموعة.*`)
+                if (/webp/.test(mime)) return replygcxeon(`*『🍀』قم بلاشارة او ارسل الصورة لوضعها ايقونة للمجموعة.*`)
                 var medis = await XeonBotInc.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
                 if (args[0] == 'full') {
                     var {
