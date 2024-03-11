@@ -4327,10 +4327,10 @@ if (!text) return replygcxeon('What location?')
            )
            }
            break
-           case 'fb':
-           case 'facebook': {
+           case 'فيس':
+           case 'فيسبوك': {
            if (!args[0]) {
-    return replygcxeon(`Please send the link of a Facebook video\n\nEXAMPLE :\n*${prefix + command}* https://fb.watch/pLLTM4AFrO/?mibextid=Nif5oz`)
+    return replygcxeon(`*『🌩』قم بارسال رابط الفيسبوك لتحميلة.*`)
   }
   const urlRegex = /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.watch)\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
   if (!urlRegex.test(args[0])) {
@@ -4339,14 +4339,14 @@ if (!text) return replygcxeon('What location?')
   try {
     const result = await fg.fbdl(args[0]);
     const tex = `
-        [ FACEBOOK DL ]
+        *[ التحميل من الفيسبوك ]*
 ${themeemoji} Title: ${result.title}`;
     const response = await fetch(result.videoUrl)
     const arrayBuffer = await response.arrayBuffer()
     const videoBuffer = Buffer.from(arrayBuffer)
     XeonBotInc.sendMessage(m.chat, {video: videoBuffer, caption: tex}, {quoted: m})
   } catch (error) {
-    replygcxeon('Maybe private video!')
+    replygcxeon('*『ها هوا الفيديو الخاص بك』*')
   }
   }
   break
@@ -4452,14 +4452,14 @@ Id : ${q.split("|")[0]}
 ID Zone: ${q.split("|")[1]}`)
 }
 break
-case 'spotify':{
-	if (!text) return replygcxeon(`*Please enter a song name*`)
+case 'سبوتفاي':{
+	if (!text) return replygcxeon(`*『🧪』الرجاء إدخال اسم الأغنية*`)
     try {
         const apiUrl = `https://www.guruapi.tech/api/spotifyinfo?text=${encodeURIComponent(text)}`
         const response = await fetch(apiUrl);
         if (!response.ok) {
             console.log('Error searching for song:', response.statusText)
-            return replygcxeon('Error searching for song')
+            return replygcxeon('*『❌』خطأ في البحث عن الأغنية*')
         }
         const data = await response.json()
         const coverimage = data.spty.results.thumbnail
@@ -4477,8 +4477,8 @@ case 'spotify':{
         try {
             await fs.promises.writeFile(audioFilePath, audioBuffer)
         } catch (writeError) {
-            console.error('Error writing audio file:', writeError)
-            return replygcxeon( 'Error writing audio file')
+            console.error('*『❌』خطأ في البحث عن الأغنية:*', writeError)
+            return replygcxeon( '*『❌』خطأ في البحث عن الأغنية*')
         }
         let doc = {
             audio: {
@@ -6685,16 +6685,17 @@ case 'blur':
 *┇لصورة*
 *┇اكتب*
 *┇لجيف*
+*┇لكود
 *┇دمج*
 *┛━──━✦⊱⋟🌩⋞⊰✦━──━┗*
 *┓── • ◈ • ──┏*
 *┇الصور:⤹╵        ┇*
 *┛── • ◈ • ──┗*
 *┓━──━✦⊱⋟🌩⋞⊰✦━──━┏*
-*┇اكيرا*
-*┇ببجي*
+*┇افتارات*
+*┇خلفيات*
 *┇قهوة*
-*┇تقيم*
+*┇اكيرا*
 *┇اكايما*
 *┇بروتو*
 *┇بتس*
@@ -6702,13 +6703,14 @@ case 'blur':
 *┇ديدرا*
 *┇تنكر*
 *┇ساجيري*
+*┇ببجي*
 *┛━──━✦⊱⋟🌩⋞⊰✦━──━┗*
 *┓── • ◈ • ──┏*
 *┇الاصوات:⤹╵    ┇*
 *┛── • ◈ • ──┗*
 *┓━──━✦⊱⋟🌩⋞⊰✦━──━┏*
 *┇هدوء*
-"┇تحسين*
+*┇تحسين*
 *┇سنجاب*
 *┇بطيء*
 *┇سلس*
@@ -6719,7 +6721,20 @@ case 'blur':
 *┇سمين*
 *┇روبوت*
 *┛━──━✦⊱⋟🌩⋞⊰✦━──━┗*
-`
+*┓── • ◈ • ──┏*
+*┇التحميل   :⤹╵  ┇*
+*┛── • ◈ • ──┗*
+*┓━──━✦⊱⋟🌩⋞⊰✦━──━┏*
+*┇تيك*
+*┇فيس*
+*┇تويتر*
+*┇انستا*
+*┇سبوتفاي*
+*┇هابيمود*
+*┇درايف*
+*┇ميديافاير*
+*┇درايف*
+*┛━──━✦⊱⋟🌩⋞⊰✦━──━┗*`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
                         image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
