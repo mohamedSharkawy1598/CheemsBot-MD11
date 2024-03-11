@@ -4269,10 +4269,10 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     XeonBotInc.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => replygcxeon(mess.error))
 break
 case 'تيك':{
-if (!q) return replygcxeon( `Example : ${prefix + command} link`)
+if (!q) return replygcxeon( `*『🕸』اين هوا الرابط الذي تود تنزيلة.*`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
-XeonBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.watermark }}, {quoted:m})
+XeonBotInc.sendMessage(m.chat, { caption: `*『ها هوا الفيديو الخاص بك』*`, video: { url: data.watermark }}, {quoted:m})
 })
 }
 break
@@ -4285,16 +4285,16 @@ XeonBotInc.sendMessage(m.chat, { audio: xeontikmp3, mimetype: 'audio/mp4', ptt: 
 })
 }
 break
-case 'google': {
-if (!q) return replygcxeon(`Example : ${prefix + command} ${botname}`)
+case 'بحث': case 'جوجل': case 'البحث': case 'ابحث': {
+if (!q) return replygcxeon(`*『📍』قم بكتابةاسمالشئ الذي تود البحث عنة*`)
 await XeonStickWait()
 let google = require('google-it')
 google({'query': text}).then(res => {
-let teks = `Google Search From : ${text}\n\n`
+let teks = `*البحث من جوجل*\n\n`
 for (let g of res) {
-teks += `⭔ *Title* : ${g.title}\n`
-teks += `⭔ *Description* : ${g.snippet}\n`
-teks += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
+teks += `⭔ *الاسم* : ${g.title}\n`
+teks += `⭔ *الوصف* : ${g.snippet}\n`
+teks += `⭔ *الرابط* : ${g.link}\n\n────────────────────────\n\n`
 } 
 replygcxeon(teks)
 })
