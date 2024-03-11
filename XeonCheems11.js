@@ -3229,7 +3229,7 @@ break
             }
             break
             case 'شقلب': {
-                if (args.length < 1) return replygcxeon(`Example:\n${prefix}fliptext dgxeon`)
+                if (args.length < 1) return replygcxeon(`*『🔖』اين هيا الجملة التي تريد شقلبتها.*`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
                 replygcxeon(`\`\`\`「 شقلبة 」\`\`\`\n*•> العادي :*\n${quere}\n*•> الشقلبة :*\n${flipe}`)
