@@ -2995,7 +2995,7 @@ mentionedJid:[sender],
 })
 }
 break
-            case 'المطور': {
+            case 'المطور': case 'مطور': {
                 XeonBotInc.sendMessage(from, {
                     contacts: {
                         displayName: `${list.length} Contact`,
@@ -3042,9 +3042,9 @@ replygcxeon(`Photo/Video?`)
 }
 }
 break
-            case 'toimage':
-            case 'toimg': {
-                if (!/webp/.test(mime)) return replygcxeon(`Reply sticker with caption *${prefix + command}*`)
+            case 'لصورة':
+            case 'لصوره': {
+                if (!/webp/.test(mime)) return replygcxeon(`*『🖼』قم بلاشارة علي الملصق لجعلة صورة*`)
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(qmsg)
                 let ran = await getRandom('.png')
@@ -3062,9 +3062,9 @@ break
 
             }
             break
-            case 'tomp4':
+            case 'لفيديو':
             case 'tovideo': {
-                if (!/webp/.test(mime)) return replygcxeon(`Reply sticker with caption *${prefix + command}*`)
+                if (!/webp/.test(mime)) return replygcxeon(`*『🎞』قم بلاشارة علي الملصق لجعلة فيديو*`)
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(qmsg)
                 let webpToMp4 = await webp2mp4File(media)
@@ -3080,9 +3080,9 @@ break
 
             }
             break
-            case 'toaud':
-            case 'toaudio': {
-                if (!/video/.test(mime) && !/audio/.test(mime)) return replygcxeon(`Send/Reply Video/Audio that you want to make into audio with captions ${prefix + command}`)
+            case 'لصوت':
+            case 'لاوديو': {
+                if (!/video/.test(mime) && !/audio/.test(mime)) return replygcxeon(`*『🎚』قم بلاشارة علي الفيديو لجعلة صوت*`)
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadMediaMessage(qmsg)
                 let audio = await toAudio(media, 'mp4')
@@ -3129,7 +3129,7 @@ break
 
             }
             break
-            case 'togif': {
+            case 'ل': {
                 if (!/webp/.test(mime)) return replygcxeon(`Reply sticker with caption *${prefix + command}*`)
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(qmsg)
@@ -3147,7 +3147,7 @@ break
 
             }
             break
-            case 'tourl': {
+            case 'لرابط': {
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(qmsg)
                 if (/image/.test(mime)) {
@@ -3161,10 +3161,10 @@ break
 
             }
             break
-            case 'emojimix': {
+            case 'دمج': {
                 let [emoji1, emoji2] = text.split`+`
-                if (!emoji1) return replygcxeon(`Example : ${prefix + command} 😅+🤔`)
-                if (!emoji2) return replygcxeon(`Example : ${prefix + command} 😅+🤔`)
+                if (!emoji1) return replygcxeon(`*『🍀』مثال* : ${prefix + command} 😅+🤔`)
+                if (!emoji2) return replygcxeon(`*『🍀』مثال* : ${prefix + command} 😅+🤔`)
                 await XeonStickWait()
                 let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
                 for (let res of anu.results) {
