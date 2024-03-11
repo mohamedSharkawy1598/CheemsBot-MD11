@@ -3129,7 +3129,7 @@ break
 
             }
             break
-            case 'ل': {
+            case 'لجيف': {
                 if (!/webp/.test(mime)) return replygcxeon(`Reply sticker with caption *${prefix + command}*`)
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(qmsg)
@@ -3235,8 +3235,8 @@ break
                 replygcxeon(`\`\`\`「 شقلبة 」\`\`\`\n*•> العادي :*\n${quere}\n*•> الشقلبة :*\n${flipe}`)
             }
             break
-            case 'toqr':{
-  if (!q) return replygcxeon(' Please include link or text!')
+            case 'لكود':{
+  if (!q) return replygcxeon('*『🔰』قم بلاشارة علي الجملة او الرابط الذ تود تحوبلة لكود.*')
    const QrCode = require('qrcode-reader')
    const qrcode = require('qrcode')
    let qyuer = await qrcode.toDataURL(q, { scale: 35 })
@@ -3244,7 +3244,7 @@ break
    let buff = getRandom('.jpg')
    await fs.writeFileSync('./'+buff, data)
    let medi = fs.readFileSync('./' + buff)
-  await XeonBotInc.sendMessage(from, { image: medi, caption:"Here you go!"}, { quoted: m })
+  await XeonBotInc.sendMessage(from, { image: medi, caption:"*『ها هوا طلبك』*"}, { quoted: m })
    setTimeout(() => { fs.unlinkSync(buff) }, 10000)
   }
   break
@@ -3274,21 +3274,21 @@ fs.unlinkSync(rname)
 })
 }
 break
-  case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'squirrel':
+  case 'تحسين': case 'منفوخ': case 'عميق': case 'صاخب': case 'سريع': case 'سمين': case 'هدوء': case 'عكس': case 'روبوت': case 'بطيء': case 'سلس': case 'سنجاب':
                 try {
                 let set
-                if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
-                if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
-                if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
-                if (/earrape/.test(command)) set = '-af volume=12'
-                if (/fast/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
-                if (/fat/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
-                if (/nightcore/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
-                if (/reverse/.test(command)) set = '-filter_complex "areverse"'
-                if (/robot/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
-                if (/slow/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
-                if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
-                if (/squirrel/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
+                if (/تحسين/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
+                if (/منفوخ/.test(command)) set = '-af acrusher=.1:1:64:0:log'
+                if (/عميق/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
+                if (/صاخب/.test(command)) set = '-af volume=12'
+                if (/سريع/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
+                if (/سمين/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
+                if (/هدوء/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
+                if (/عكس/.test(command)) set = '-filter_complex "areverse"'
+                if (/روبوت/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
+                if (/بطئ/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
+                if (/سلس/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
+                if (/سنجاب/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
                 if (/audio/.test(mime)) {
                 await XeonStickWait()
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
@@ -3300,7 +3300,7 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
                 fs.unlinkSync(ran)
                 })
-                } else replygcxeon(`Reply to the audio you want to change with a caption *${prefix + command}*`)
+                } else replygcxeon(`*『🎚』بلاشارة علي الصوت الذي تريد ان تعدلة بي ${prefix + command}.*`)
                 } catch (e) {
                 replygcxeon(e)
                 }
