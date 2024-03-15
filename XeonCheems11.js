@@ -1104,7 +1104,6 @@ ${arr.slice(6).join('')}
 ${isWin ? `*『@${winner.split('@')[0]} الفائز🥇』*` : isTie ? `*『انتهت الجولة🧪』*` : `*انة دور* ${['❌', '⭕'][1 * room.game._currentTurn]} *『@${room.game.currentTurn.split('@')[0]}』*`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
-
 *『اكتب استسلم لي الخروج🍀』*`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
                 room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
@@ -4300,23 +4299,23 @@ replygcxeon(teks)
 })
 }
 break
-case 'weather':{
-if (!text) return replygcxeon('What location?')
+case 'الطقس':{
+if (!text) return replygcxeon('*『📆』قم بكتابة اسم الدولة بلغة الانجليزية فقط.*)
             let wdata = await axios.get(
                 `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en`
             );
             let textw = ""
-            textw += `*🗺️Weather of  ${text}*\n\n`
-            textw += `*Weather:-* ${wdata.data.weather[0].main}\n`
-            textw += `*Description:-* ${wdata.data.weather[0].description}\n`
-            textw += `*Avg Temp:-* ${wdata.data.main.temp}\n`
-            textw += `*Feels Like:-* ${wdata.data.main.feels_like}\n`
-            textw += `*Pressure:-* ${wdata.data.main.pressure}\n`
-            textw += `*Humidity:-* ${wdata.data.main.humidity}\n`
-            textw += `*Humidity:-* ${wdata.data.wind.speed}\n`
-            textw += `*Latitude:-* ${wdata.data.coord.lat}\n`
-            textw += `*Longitude:-* ${wdata.data.coord.lon}\n`
-            textw += `*Country:-* ${wdata.data.sys.country}\n`
+            textw += `*الطقس  ${text}*\n\n`
+            textw += `*طقس:-* ${wdata.data.weather[0].main}\n`
+            textw += `*الوصف:-* ${wdata.data.weather[0].description}\n`
+            textw += `*متوسط ​​درجة الحرارة:-* ${wdata.data.main.temp}\n`
+            textw += `*أحس كأنني:-* ${wdata.data.main.feels_like}\n`
+            textw += `*ضغط:-* ${wdata.data.main.pressure}\n`
+            textw += `*رطوبة:-* ${wdata.data.main.humidity}\n`
+            textw += `*رطوبة:-* ${wdata.data.wind.speed}\n`
+            textw += `*خط العرض:-* ${wdata.data.coord.lat}\n`
+            textw += `*خط الطول:-* ${wdata.data.coord.lon}\n`
+            textw += `*البلد:-* ${wdata.data.sys.country}\n`
 
            XeonBotInc.sendMessage(
                 m.chat, {
@@ -4594,13 +4593,13 @@ case 'رنة': case 'رنه': {
 		XeonBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
 	    break
-case 'بنات':
+case 'girls':
 await XeonStickWait()
 var asupan = JSON.parse(fs.readFileSync('./src/media/tiktokvids/tiktokgirl.json'))
 var hasil = pickRandom(asupan)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
 break
-case 'ولاد':
+case 'Boys':
 await XeonStickWait()
 var gheayubi = JSON.parse(fs.readFileSync('./src/media/tiktokvids/gheayubi.json'))
 var hasil = pickRandom(gheayubi)
@@ -4880,11 +4879,11 @@ const reply = `
             await replygcxeon(jawab)
             }
             break
-            case 'when': {
-            	if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} will i get married?`)
-            	let kapan = ['5 More Days', '10 More Days', '15 More Days','20 More Days', '25 More Days','30 More Days','35 More Days','40 More Days','45 More Days','50 More Days','55 More Days','60 More Days','65 More Days','70 More Days','75 More Days','80 More Days','85 More Days','90 More Days','100 More Days','5 Months More', '10 Months More', '15 Months More','20 Months More', '25 Months More','30 Months More','35 Months More','40 Months More','45 Months More','50 Months More','55 Months More','60 Months More','65 Months More','70 Months More','75 Months More','80 Months More','85 Months More','90 Months More','100 Months More','1 More Year','2 More Years','3 More Years','4 More Years','5 More Years','Tomorrow','The Day After Tomorrow']
+            case 'متا': {
+            	if (!text) return replygcxeon(`*『🍀』قم بكتابة كلمة او جملة وسوف انا اقوم بتخمين متا*`)
+            	let kapan = ['بكرا', '10 بعد عشر سنين', 'الاسبوع الجاي يوم العيد','20 بعد 20 سنه', '25 بعد يومين','30 بعد 50 سنه','35 بعد ما تموت','40']
                 let koh = kapan[Math.floor(Math.random() * kapan.length)]
-                let jawab = `*${command} ${text}*\nAnswer : ${koh}`                
+                let jawab = `*${command} ${text}*\n『المدة📆』 : ${koh}`                
             await replygcxeon(jawab)
             }
             break
